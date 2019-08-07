@@ -1,0 +1,142 @@
+/* 通用全局样式设定 */
+html {
+  min-width: 360px;
+}
+body {
+  background: #eee;
+}
+ul,
+li {
+  list-style: none;
+}
+a,
+a:hover,
+a:visited,
+a:link,
+a:active {
+  text-decoration: none;
+  color: #212121;
+}
+main section.container div.logo {
+  background: #fff;
+  width: 45%;
+  display: table;
+  margin: 2em auto 0;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-bottom: none;
+}
+main section.container div.logo h2 {
+  font-weight: 800;
+  font-size: 2.5em;
+}
+main section.container div.login-form {
+  width: 45%;
+  background: #fff;
+  margin: 0 auto;
+  display: table;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+main section.container div.login-form p.tip {
+  text-align: center;
+}
+main section.container div.login-form p.tip #tip {
+  color: #f00;
+}
+main section.container div.login-form form {
+  width: 100%;
+  padding: 0.2em 1em;
+}
+main section.container div.login-form form input {
+  width: 100%;
+  font-size: 1em;
+  padding: 0.8em;
+  outline: none;
+  border: 1px solid #ccc;
+  background: transparent;
+}
+main section.container div.login-form form span.warn {
+  float: right;
+  padding: 0.8em;
+  font-size: 0.6em;
+}
+main section.container div.login-form form p {
+  padding: 0.8em 0;
+  margin: 0.8em 0;
+  width: 100%;
+}
+main section.container div.login-form form p a#forgot {
+  color: #f00;
+}
+main section.container div.login-form form p span.newUser {
+  float: right;
+  color: #f00;
+}
+main section.container div.login-form form p span.newUser a {
+  color: #38f;
+}
+main section.container div.login-form form button#loginBtn {
+  width: 100%;
+  padding: 0.8em;
+  border: 1px solid #ccc;
+  color: #fff;
+  font-weight: 800;
+  outline: none;
+  transition: all 0.5s ease;
+  background-color: #3399CC;
+  margin-bottom: 3em;
+  cursor: pointer;
+}
+main section.container div.login-form form button#loginBtn:hover {
+  background-color: #3C43A4;
+}
+@media (max-width: 1199px) {
+  main section.container div.logo {
+    width: 55%;
+  }
+  main section.container div.login-form {
+    width: 55%;
+  }
+}
+@media (max-width: 991px) {
+  main section.container div.logo {
+    width: 72%;
+  }
+  main section.container div.login-form {
+    width: 72%;
+  }
+}
+@media (max-width: 768px) {
+  main section.container div.logo {
+    width: 76%;
+  }
+  main section.container div.login-form {
+    width: 76%;
+  }
+}
+@media (max-width: 680px) {
+  main section.container div.logo {
+    width: 84%;
+  }
+  main section.container div.login-form {
+    width: 84%;
+  }
+}
+@media (max-width: 640px) {
+  main section.container div.logo {
+    width: 90%;
+  }
+  main section.container div.login-form {
+    width: 90%;
+  }
+}
+@media (max-width: 400) {
+  main section.container div.logo {
+    width: 100%;
+  }
+  main section.container div.login-form {
+    width: 100%;
+  }
+}

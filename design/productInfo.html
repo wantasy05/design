@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>商品详情</title>
+		<link rel="stylesheet" href="./css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="./css/productInfo.css" />
+		<link rel="stylesheet" href="./css/font-awesome.min.css" type="text/css" />
+		<!--<script src="js/move.js"></script>-->
+		<script src="./js/jquery-1.7.2.js"></script>
+		<script>
+			var jq172 = $.noConflict(true);
+		</script>
+		<script src="./js/jquery-1.11.3.js"></script>
+		<script src="./js/bootstrap.js"></script>
+		<script src="js/productInfo.js"></script>
+		<script src="js/shoppingCart.js"></script>
+		<!--<script src="js/home.js"></script>-->
+	</head>
+
+	<body>
+		<!--start of header-->
+		<header class="header">
+			<section class="container">
+				<div class="row">
+					<!--start of login button-->
+					<div class="col-xs-5 col-sm-4 col-md-3 col-lg-4">
+						<div class="login">
+							<a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
+						</div>
+					</div>
+					<!--end of login button-->
+					<!--start of logo-->
+					<div class="col-xs-7 col-sm-4 col-md-3 col-lg-4">
+						<div class="logo">
+							<img src="img/lit-logo1.png" alt="" />
+							<h1>
+						<a href="#">
+							小店
+						</a>
+					</h1>
+						</div>
+					</div>
+					<!--end of logo-->
+					<!--start of search box-->
+					<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+						<div class="search">
+							<div class="search_box">
+								<span class="glyphicon glyphicon-search"></span>
+							</div>
+							<div class="search_form">
+								<form action="#" method="post">
+									<input type="text" name="search" placeholder="搜索..." />
+									<input type="submit" value="搜索" />
+								</form>
+							</div>
+
+						</div>
+					</div>
+					<!--end of search box-->
+					<!--start of shopping cart-->
+					<div class="col-xs-12 col-sm-2 col-md-3 col-lg-2">
+						<div class="shoppingCart">
+							<form action="#" method="post" id="cartform">
+								<input type="hidden" name="cart" value="cart" />
+								<ipnut name="" type="hiddent" value="1"></ipnut>
+
+							</form>
+							<button id="shoppingCart">
+								<i class="fa fa-cart-arrow-down"></i>
+							</button>
+							<div class="shoppingCartList">
+								<button class="close">×</button>
+								<ul class="theBox">
+									您的购物车空空如也！
+									<!--<li>
+										<span class="productname">小米手机5</span>
+			<input type="text" value="0" />
+										<button>×</button>
+										<span>1799.00</span>
+									</li>-->
+								</ul>
+								<div class="bottom">
+									<span>总价:<b class="total">00.00</b>元。</span>
+									<button class="buy">结算</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--end of shopping cart-->
+
+				</div>
+			</section>
+		</header>
+		<!--end of header-->
+		<!--start of navigation-->
+		<section class="navigation">
+			<div class="container">
+				<nav class="navbar navbar-default">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+						</button>
+					</div>
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li>
+								<a href="#">首页</a>
+							</li>
+							<li>
+								<a href="#">食品</a>
+							</li>
+							<li>
+								<a href="#">电器</a>
+							</li>
+							<li>
+								<a href="#">移动设备</a>
+							</li>
+							<li>
+								<a href="#">日用品</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</section>
+		<!--end of navigation-->
+		
+		<!--start of detail-->
+		<section class="detail">
+			<div class="container">
+				<div class="row picRow">
+					<div class="col-sm-6 col-md-5 col-lg-5 pic">
+						<div class="left">
+							<img src="img/xiaomi1.jpg" alt="" id="smallImg" />
+							<div id="flag"></div>
+							<div id="cover"></div>
+						</div>
+						<div class="row bottomRow">
+							<div class="col-sm-3 col-md-3 col-lg-3 sm_pic">
+								<img src="img/xiaomi1.jpg" alt="" class="leftPic" />
+							</div>
+							<div class="col-sm-3 col-md-3 col-lg-3 sm_pic">
+								<img src="img/xiaomi2.jpg" alt="" class="leftPic" />
+							</div>
+							<div class="col-sm-3 col-md-3 col-lg-3 sm_pic">
+								<img src="img/xiaomi3.jpg" alt="" class="leftPic" />
+							</div>
+							<div class="col-sm-3 col-md-3 col-lg-3 sm_pic">
+								<img src="img/xiaomi4.jpg" alt="" class="leftPic" />
+							</div>
+						</div>
+						<div class="right">
+							<img src="img/xiaomi1.jpg" alt="" id="bigImg"/>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-7 col-lg-7 info">
+						<div class="infoContainer">
+							<div class="top">
+								<h2>小米手机5</h2>
+							</div>
+							<div class="star">
+								<i class="fa fa-star blue-star"></i>
+								<i class="fa fa-star blue-star"></i>
+								<i class="fa fa-star blue-star"></i>
+								<i class="fa fa-star blue-star"></i>
+								<i class="fa fa-star-half-empty blue-star"></i>
+							</div>
+							
+							<dl class="description">
+								<dt>产品描述:</dt>
+								<dd>骁龙820处理器，最大可选 4GB 内存 + 128GB 闪存 4 轴防抖相机，3D陶瓷 / 玻璃机身支持手机分身，能刷公交卡、银行卡</dd>
+							</dl>
+							
+							<div class="price">
+								<span>价格：</span>
+								<b><i class="fa fa-yen"></i>1799.00</b>
+							</div>
+							<div class="num">
+								<button id="minus"><span class="glyphicon glyphicon-minus"></span></button>
+								<input type="text" id="num" value="0" readonly="true" />
+								<button id="plus"><span class="glyphicon glyphicon-plus "></span></button>
+								<span id="total">总价：<b>0.00</b>元</span>
+							</div>
+							<form action="#" class="hide" id="mi5">
+								<input type="hidden" value='{"name":"小米手机5","price":"1799.00"}'/>
+							</form>
+							<button type="submit" class="addCart" form="mi5" id="infoAddCart">加入购物车</button>
+						</div>
+							
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--end of detail-->
+		<!--start of comment-->
+		<section class="comment">
+			<div class="theBar">
+				<div class="container">
+					<h2>最新评论</h2>
+				</div>
+				
+			</div>
+			<div class="container">
+				<!--start of 评论1-->
+				<div class="box">
+					<div class="theUser">
+						<div class="headPic">
+							<img src="img/user1.png" alt="" />
+						</div>
+						<p class="user_name">会飞的小猪</p>
+					</div>
+						
+					<div class="content">
+						<p>手机不错，性价比很高，，手机反应速度很快，看直播都是秒开，拍照光线好的情况下很不错，小米的系统确实用着方便。</p>
+						<span class="date">2017年2月23日 15:39</span>
+					</div>
+				</div>
+				<!--end of 评论1-->
+				<!--start of 评论2-->
+				<div class="box">
+					<div class="theUser">
+						<div class="headPic">
+							<img src="img/user2.png" alt="" />
+						</div>
+						<p class="user_name">奔跑的小蜗牛</p>
+					</div>
+						
+					<div class="content">
+						<p>小米手机的性能在这里就不评价了，性价比一如既往地高，指纹解锁已支持支付宝，14万跑分，颜值很好，别整套和膜了，裸奔其实很好看。</p>
+						<span class="date">2017年2月15日 10:42</span>
+					</div>
+				</div>
+				<!--end of 评论2-->
+				<!--start of 评论3-->
+				<div class="box">
+					<div class="theUser">
+						<div class="headPic">
+							<img src="img/user3.png" alt="" />
+						</div>
+						<p class="user_name">嘴遁小强</p>
+					</div>
+						
+					<div class="content">
+						<p>小米5这机子还真没得说，指纹解锁和付款，超方便的功能。看动漫的效果也是very good. 待机时间长，续航时间也不赖。不过偶尔发烧这一点完全没有落了小米发烧机的名号！</p>
+						<span class="date">2017年1月18日 14:17</span>
+					</div>
+				</div>
+				<!--end of 评论3-->
+				
+				
+				
+			</div>
+		</section>
+		<!--end of comment-->
+		<!--start of eletric-->
+		<section class="eletric floors">
+			<div class="theBar">
+				<div class="container">
+					<h2>推荐商品</h2>
+				</div>
+				
+			</div>
+			<div class="container">
+				<ul class="row electronic_list">
+					<li class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+						<div class="box">
+							<a href="#">
+								<img src="img/14.jpg" alt="" />
+							</a>
+							<div class="electrCover"></div>
+							<div class="content">
+								<h4>特级冰箱</h4>
+								<p>
+									<span class="price">￥1999.00</span><del>￥2345.00</del>
+								</p>
+								<form action="#" class="hide" id="electric1">
+									<input type="hidden" value='{"name":"特级冰箱","price":"1999.00"}' />
+								</form>
+								<button class="addCart" type="submit" form="electric1">加入购物车</button>
+							</div>
+						</div>
+
+					</li>
+					<li class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+						<div class="box">
+							<a href="#">
+								<img src="img/15.jpg" alt="" />
+							</a>
+							<div class="electrCover"></div>
+							<div class="content">
+								<h4>大屏液晶</h4>
+								<p>
+									<span class="price">￥3999.00</span><del>￥4345.00</del>
+								</p>
+								<form action="#" class="hide" id="electric2">
+									<input type="hidden" value='{"name":"大屏液晶","price":"3999.00"}' />
+								</form>
+								<button class="addCart" type="submit" form="electric2">加入购物车</button>
+							</div>
+						</div>
+					</li>
+					<li class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+						<div class="box">
+							<a href="#">
+								<img src="img/16.jpg" alt="" />
+							</a>
+							<div class="electrCover"></div>
+							<div class="content">
+								<h4>洗衣机</h4>
+								<p>
+									<span class="price">￥599.00</span><del>￥999.00</del>
+								</p>
+								<form action="#" class="hide" id="electric3">
+									<input type="hidden" value='{"name":"洗衣机","price":"599.00"}' />
+								</form>
+								<button class="addCart" type="submit" form="electric3">加入购物车</button>
+							</div>
+						</div>
+					</li>
+					<li class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+						<div class="box">
+							<a href="#">
+								<img src="img/17.jpg" alt="" />
+							</a>
+							<div class="electrCover"></div>
+							<div class="content">
+								<h4>研磨机</h4>
+								<p>
+									<span class="price">￥999.00</span><del>￥1388.00</del>
+								</p>
+								<form action="#" class="hide" id="electric4">
+									<input type="hidden" value='{"name":"研磨机","price":"999.00"}' />
+								</form>
+								<button class="addCart" type="submit" form="electric4">加入购物车</button>
+							</div>
+						</div>
+					</li>
+					<li class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+						<div class="box">
+							<a href="#">
+								<img src="img/18.jpg" alt="" />
+							</a>
+							<div class="electrCover"></div>
+							<div class="content">
+								<h4>饮水机</h4>
+								<p>
+									<span class="price">￥1999.00</span><del>￥2345.00</del>
+								</p>
+								<form action="#" class="hide" id="electric5">
+									<input type="hidden" value='{"name":"饮水机","price":"1999.00"}' />
+								</form>
+								<button class="addCart" type="submit" form="electric5">加入购物车</button>
+							</div>
+						</div>
+					</li>
+					<li class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+						<div class="box">
+							<a href="#">
+								<img src="img/19.jpg" alt="" />
+							</a>
+							<div class="electrCover"></div>
+							<div class="content">
+								<h4>咖啡机</h4>
+								<p>
+									<span class="price">￥1999.00</span><del>￥2345.00</del>
+								</p>
+								<form action="#" class="hide" id="electric6">
+									<input type="hidden" value='{"name":"咖啡机","price":"1999.00"}' />
+								</form>
+								<button class="addCart" type="submit" form="electric6">加入购物车</button>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<ul class="row electronic_list">
+					<li class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+						<div class="box">
+							<a href="#">
+								<img src="img/audio1.jpg" alt="" />
+							</a>
+							<div class="electrCover"></div>
+							<div class="content">
+								<h4>特级音响</h4>
+								<p>
+									<span class="price">￥199.00</span><del>￥245.00</del>
+								</p>
+								<form action="#" class="hide" id="electric7">
+									<input type="hidden" value='{"name":"特级音响","price":"199.00"}' />
+								</form>
+								<button class="addCart" type="submit" form="electric7">加入购物车</button>
+							</div>
+						</div>
+
+					</li>
+					<li class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+						<div class="box">
+							<a href="#">
+								<img src="img/audio2.jpg" alt="" />
+							</a>
+							<div class="electrCover"></div>
+							<div class="content">
+								<h4>头戴式耳机</h4>
+								<p>
+									<span class="price">￥399.00</span><del>￥445.00</del>
+								</p>
+								<form action="#" class="hide" id="electric8">
+									<input type="hidden" value='{"name":"头戴式耳机","price":"399.00"}' />
+								</form>
+								<button class="addCart" type="submit" form="electric8">加入购物车</button>
+							</div>
+						</div>
+					</li>
+					<li class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+						<div class="box">
+							<a href="#">
+								<img src="img/audio3.jpg" alt="" />
+							</a>
+							<div class="electrCover"></div>
+							<div class="content">
+								<h4>小巧MP3</h4>
+								<p>
+									<span class="price">￥199.00</span><del>￥220.00</del>
+								</p>
+								<form action="#" class="hide" id="electric9">
+									<input type="hidden" value='{"name":"小巧MP3","price":"199.00"}' />
+								</form>
+								<button class="addCart" type="submit" form="electric9">加入购物车</button>
+							</div>
+						</div>
+					</li>
+					<li class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+						<div class="box">
+							<a href="#">
+								<img src="img/pc2.jpg" alt="" />
+							</a>
+							<div class="electrCover"></div>
+							<div class="content">
+								<h4>超级游戏本</h4>
+								<p>
+									<span class="price">￥5999.00</span><del>￥6888.00</del>
+								</p>
+								<form action="#" class="hide" id="electric10">
+									<input type="hidden" value='{"name":"游戏笔记本","price":"5999.00"}' />
+								</form>
+								<button class="addCart" type="submit" form="electric10">加入购物车</button>
+							</div>
+						</div>
+					</li>
+					<li class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+						<div class="box">
+							<a href="#">
+								<img src="img/phone5.jpg" alt="" />
+							</a>
+							<div class="electrCover"></div>
+							<div class="content">
+								<h4>绝代老人机</h4>
+								<p>
+									<span class="price">￥499.00</span><del>￥545.00</del>
+								</p>
+								<form action="#" class="hide" id="electric11">
+									<input type="hidden" value='{"name":"绝代老人机","price":"499.00"}' />
+								</form>
+								<button class="addCart" type="submit" form="electric11">加入购物车</button>
+							</div>
+						</div>
+					</li>
+					<li class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+						<div class="box">
+							<a href="#">
+								<img src="img/pc3.jpg" alt="" />
+							</a>
+							<div class="electrCover"></div>
+							<div class="content">
+								<h4>女士专用迷你本</h4>
+								<p>
+									<span class="price">￥3999.00</span><del>￥4444.00</del>
+								</p>
+								<form action="#" class="hide" id="electric12">
+									<input type="hidden" value='{"name":"女士专用迷你本","price":"3999.00"}' />
+								</form>
+								<button class="addCart" type="submit" form="electric12">加入购物车</button>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<!--end of eletric-->
+
+		<footer class="footer">
+
+			<div class="container">
+				<!--start of 相关链接-->
+				<div class="row footer_top">
+					<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+						<dl>
+							<dt>购物指南</dt>
+							<dd>
+								<a href="#">购物流程</a>
+							</dd>
+							<dd>
+								<a href="#">常见问题</a>
+							</dd>
+							<dd>
+								<a href="#">联系客服</a>
+							</dd>
+						</dl>
+					</div>
+					<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+						<dl>
+							<dt>配送方式</dt>
+							<dd>
+								<a href="#">上门自取</a>
+							</dd>
+							<dd>
+								<a href="#">配送服务查询</a>
+							</dd>
+							<dd>
+								<a href="#">配送费用收取标准</a>
+							</dd>
+						</dl>
+					</div>
+					<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+						<dl>
+							<dt>支付方式</dt>
+							<dd>
+								<a href="#">货到付款</a>
+							</dd>
+							<dd>
+								<a href="#">在线支付</a>
+							</dd>
+							<dd>
+								<a href="#">分期付款</a>
+							</dd>
+						</dl>
+					</div>
+					<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+						<dl>
+							<dt>售后服务</dt>
+							<dd>
+								<a href="#">售后政策</a>
+							</dd>
+							<dd>
+								<a href="#">退款说明</a>
+							</dd>
+							<dd>
+								<a href="#">退/换货</a>
+							</dd>
+							<dd>
+								<a href="#">取消订单</a>
+							</dd>
+						</dl>
+					</div>
+				</div>
+				<!--end of 相关链接-->
+				<!--start of copyright-->
+				<div class="copyright footer_bottom">
+					<span>Copyright&nbsp;&copy;&nbsp;</span><span>2016&nbsp;-&nbsp;2017</span><span>小店myxiaodian.com</span>&nbsp;<span>版权所有</span><span>&nbsp;|&nbsp;</span>
+				</div>
+				<!--end of copyright-->
+			</div>
+		</footer>
+		<!--end of footer-->
+	</body>
+
+</html>

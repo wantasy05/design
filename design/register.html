@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Register</title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/register.css" />
+        <script src="js/jquery-1.11.3.js"></script>
+        <script src="js/register.js"></script>
+    </head>
+
+    <body>
+        <header>
+        </header>
+        <main>
+            <section class="container">
+                <!-- star of logo -->
+                <div class="logo">
+                    <a href="home.html">
+                        <img src="img/lit-logo1.png" alt="" /><br />
+                        <h2>小店</h2>
+                    </a>
+                </div>
+                <!-- end of logo -->
+                <!-- star of form -->
+                <div class="register-form">
+                    <p class="tip"><span id="tip">&nbsp;</span></p>
+                    <form action="#" method="post" id="register">
+                        <!-- input of user -->
+                        <input class="input" type="text" name="username" placeholder="请输入您的邮箱"  id="username"/><br />
+                        <!-- tip of user input -->
+                        <span id="userText" class="warn">请按照邮箱格式输入，如:winkey@qq.com</span>
+                        <br />
+                        <!-- input of password -->
+                        <input class="input" type="password" name="password1" placeholder="请输入密码" id="password1" /><br />
+                        <!-- tip of password input -->
+                        <span id="passwordText1" class="warn">建议至少使用两种字符组合</span>
+                        <br />
+                        <!-- input of password again -->
+                        <input class="input" type="password" name="password2" placeholder="请再次输入密码" id="password2" /><br />
+                        <!-- tip of password input -->
+                        <span id="passwordText2" class="warn">&nbsp;</span>
+                        <br />
+                        <span><a href="login.html">已有账号登录</a></span>
+                        <!-- the protocol -->
+                        <p>
+                           <input type="checkbox" name="" id="protocol" value="" />
+                           <span>阅读并同意</span><a href="#">《小店用户注册协议》</a><a href="">《隐私政策》</a>
+                        </p>
+                        <!-- the button -->
+                        <button type="submit" id="regBtn" disabled="disabled">注册</button>
+                    </form>
+                </div>
+                <!-- end of form -->
+            </section>
+        </main>
+        <footer></footer>
+    </body>
+
+</html>

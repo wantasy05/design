@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Login</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/login.css" />
+		<script src="js/jquery-1.11.3.js"></script>
+		<script src="./js/bootstrap.js"></script>
+		<script src="js/login.js"></script>
+	</head>
+
+	<body>
+		<header>
+		</header>
+		<main>
+			<section class="container">
+				<div class="logo">
+					<a href="home.html">
+						<img src="img/lit-logo1.png" alt="" /><br />
+						<h2>小店</h2>
+					</a>
+				</div>
+				<div class="login-form">
+					<p class="tip"><span id="tip">&nbsp;</span></p>
+					<form action="#" method="post" id="login">
+						<input type="text" name="username" placeholder="请输入您的邮箱"  id="username"/><br />
+						<span id="userText" class="warn">&nbsp;</span>
+						<br />
+						<input type="password" name="password" placeholder="请输入您的密码" id="password" /><br />
+						<span id="passwordText" class="warn"></span>
+						<br />
+						<p>
+							<a href="#" id="forgot">忘记密码？</a>
+							<span class="newUser">还没有账号？<a href="register.html" id="reg">立即注册</a></span>
+						</p>
+						<button type="submit" id="loginBtn">登录</button>
+					</form>
+				</div>
+			</section>
+		</main>
+		<footer></footer>
+	</body>
+
+</html>

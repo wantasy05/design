@@ -1,0 +1,165 @@
+//颜色变量
+@background:#3C43A4;
+@btnColor:#3399CC;
+
+
+/* 通用全局样式设定 */
+html{
+    min-width:360px;
+}
+body{
+    background:#eee;
+    
+}
+ul,li{
+    list-style: none;
+}
+a,a:hover,a:visited,a:link,a:active{
+    text-decoration: none;
+    color:#212121;
+}
+
+
+
+
+
+header{
+}
+
+main{
+    section.container{
+        div.logo{
+            background:#fff;
+            width:45%;
+            display:table;
+            margin:2em auto 0;
+            padding:20px;
+            text-align: center;
+            border:1px solid #ccc;
+            border-bottom: none;
+            img{
+//              margin:0 auto;
+            }
+            h2{
+                font-weight: 800;
+                font-size: 2.5em;
+                
+            }
+        }
+        div.register-form{
+            width:45%;
+            background:#fff;
+            margin:0 auto;
+            display: table;
+            border:1px solid #ccc;
+            border-top:none;
+//          height:200px;
+            p.tip{
+                text-align: center;
+                #tip{
+                    color:#f00;
+                }
+            }
+            form{
+                width:100%;
+                padding:0.2em 1em;
+                input.input{
+                    width:100%;
+                    font-size:1em;
+                    padding:0.8em;
+                    outline:none;
+                    border:1px solid #ccc;
+                    background:transparent;
+                }
+                span.warn{
+//                  text-align: right;
+                    float:right;
+                    padding:0.8em;
+                    font-size:0.6em;
+                }
+                span{
+                    a{
+                        color:#38f;
+                    }
+                }
+                p{
+                    padding:0.8em 0;
+                    margin:0.8em 0;
+                    width:100%;
+                    font-size:1em;
+                    a{
+                        color:#38f;
+                    }
+                    span.newUser{
+//                      float:right;
+//                      color:#f00;
+                    }
+                
+                }
+                button#regBtn{
+                    width:100%;
+                    padding:0.8em;
+                    border:1px solid #ccc;
+                    color:#fff;
+                    font-weight: 800;
+                    outline: none;
+                    transition: all 0.5s ease;
+                    background-color:@btnColor;
+                    margin-bottom:3em;
+                    cursor: pointer;
+                }
+                button#regBtn:hover{
+                    background-color: @background;
+                }
+            }
+        }
+        @media (max-width:1199px){
+            div.logo{
+                width:55%;
+            }
+            div.register-form{
+                width:55%;
+            }
+        }
+         @media (max-width:991px){
+            div.logo{
+                width:72%;
+            }
+            div.register-form{
+                width:72%;
+            }
+        }
+        @media (max-width:768px){
+            div.logo{
+                width:76%;
+            }
+            div.register-form{
+                width:76%;
+            }
+        }
+         @media (max-width:680px){
+            div.logo{
+                width:84%;
+            }
+            div.register-form{
+                width:84%;
+            }
+        }
+         @media (max-width:640px){
+            div.logo{
+                width:90%;
+            }
+            div.register-form{
+                width:90%;
+            }
+        }
+        @media (max-width:400){
+            div.logo{
+                width:100%;
+            }
+            div.register-form{
+                width:100%;
+            }
+        }
+    }
+}
